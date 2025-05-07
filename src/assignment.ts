@@ -16,6 +16,15 @@
       return higherRating;
     }
   }
+  
+
+  function concatenateArrays<T>(...arrays: T[][]): T[] {
+    const mergeArray = arrays.reduce((acc, curr) => acc.concat(curr), [] as T[]);
+    return mergeArray
+  }
+  
+ 
+  
 
   
   
