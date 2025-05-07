@@ -13,6 +13,6 @@ If we have a type User with name and age, then keyof User will be "name" | "age"
 ### 2. Explain the difference between any, unknown, and never types in TypeScript.
 - any means anything. I can assign any value and do anything with it. TypeScript won’t show any error. It gives full freedom but no safety.
 
-unknown also allows any value to be assigned, but I can’t use it directly. I must check its type first. This is safer than any because it avoids unexpected errors.
+- unknown also allows any value to be assigned, but I can’t use it directly. I must check its type first. This is safer than any because it avoids unexpected errors.
 
-never means the value never happens. It is used when a function never returns, like when it always throws an error or runs forever. It tells TypeScript that there will never be a value.
+- never means the value never happens. It is used when a function never returns, like when it always throws an error or runs forever. It tells TypeScript that there will never be a value.
