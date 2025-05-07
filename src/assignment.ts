@@ -49,22 +49,20 @@
     }
   }
 
-
   interface Product {
     name: string;
     price: number;
   }
-  
+
   function getMostExpensiveProduct(products: Product[]): Product | null {
     if (products.length === 0) {
       return null;
     }
-  
+
     return products.reduce((maxProduct, currentProduct) =>
       currentProduct.price > maxProduct.price ? currentProduct : maxProduct
     );
   }
-  
 
   enum Day {
     Monday,
@@ -73,9 +71,9 @@
     Thursday,
     Friday,
     Saturday,
-    Sunday
+    Sunday,
   }
-  
+
   function getDayType(day: Day): string {
     if (day === Day.Saturday || day === Day.Sunday) {
       return "Weekend";
@@ -84,17 +82,17 @@
     }
   }
 
- 
+  async function squareAsync(n: number): Promise<number> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (n < 0) {
+          reject(new Error("Negative number not allowed"));
+        } else {
+          resolve(n * n);
+        }
+      }, 1000);
+    });
+  }
+
   
-  
-  
-
-
-
-
-
-
-
-
-
 }
